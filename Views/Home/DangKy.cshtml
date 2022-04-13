@@ -1,0 +1,51 @@
+﻿@model DangNhap.Models.TaiKhoan
+
+@{
+    ViewBag.Title = "Đăng ký";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-3">
+
+    </div>
+    <div class="col-md-6 form-group">
+        <h2>Đăng ký</h2>
+        <p class="alert-danger">@ViewBag.Noti</p>
+        @using (Html.BeginForm())
+        {
+            <label class="label label-info">Tài khoản</label>
+            @Html.TextBoxFor(x => x.Username, null, new
+            {
+                @class = "form-control"
+            })
+            <label class="label label-info">Mật khẩu</label>
+            @Html.TextBoxFor(x => x.Password, null, new
+            {
+                @class = "form-control"
+            })
+            <label class="label label-info">Họ tên</label>
+            @Html.TextBoxFor(x => x.Name, null, new
+            {
+                @class = "form-control"
+            })
+            <label class="label label-info">Email</label>
+            @Html.TextBoxFor(x => x.Email, null, new
+            {
+                @class = "form-control"
+           
+            })
+            <label class="label label-info">Phonenumber</label>
+            @Html.TextBoxFor(x => x.PhoneNumber, null, new
+            {
+                @class = "form-control",
+              
+            })
+
+            <input type="submit" value="Đăng ký" class="btn btn-primary">
+        }
+    </div>
+    <div class="col-md-3">
+
+    </div>
+</div>

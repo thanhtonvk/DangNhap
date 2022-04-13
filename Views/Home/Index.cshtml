@@ -1,0 +1,34 @@
+﻿@{
+    ViewBag.Title = "Đăng nhập";
+}
+
+<div class="row">
+    <div class="col-md-3">
+
+    </div>
+    <div class="col-md-6 form-group">
+        <h2>Đăng nhập</h2>
+        <p class="alert-danger">@ViewBag.Noti</p>
+        @using (Html.BeginForm())
+        {
+            <label class="label label-info">Tài khoản</label>
+            @Html.TextBox("username", null, new
+            {
+                @class = "form-control"
+            })
+            
+            <label class="label label-info">Mật khẩu</label>
+            @Html.TextBox("password", null, new
+            {
+                @class = "form-control",
+                @type = "password"
+            })
+            
+            <input type="submit" value="Đăng nhập" class="btn btn-primary">
+            <a href="@Url.Action("DangKy", "Home")" class="btn-danger btn">Đăng ký</a>
+        }
+    </div>
+    <div class="col-md-3">
+
+    </div>
+</div>
